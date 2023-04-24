@@ -220,8 +220,8 @@ SELECT id, firstname, lastname,
 	(SELECT filename
 	 FROM media
 	 WHERE ( SELECT photo_id
-				FROM profiles
-				WHERE user_id = users.id) = media.id) AS 'filename'
+            FROM profiles
+            WHERE user_id = users.id) = media.id) AS 'filename'
 FROM users;
 
 -- выбрать фотографии (filename) пользователя с email: arlo50@example.org . ID типа медиа, соответствующий фотографиям неизвестен.
